@@ -1,15 +1,19 @@
 package comjeffersonschmitt.github.bancoandroid.domain;
 
 import com.activeandroid.Model;
+import com.activeandroid.annotation.Column;
+import com.activeandroid.annotation.Table;
 
+@Table(name = "user")
 public class User extends Model{
-  private String login;
-  private String nome;
-  private String senha;
-  private String cpf;
 
-  public User(){
-    super(); // pra que serve?
+  @Column(name = "Login") String login;
+  @Column(name = "Nome") String nome;
+  @Column(name = "Senha") String senha;
+  @Column(name = "Cpf") String cpf;
+
+  public User() {
+    super();
   }
 
   public User(String login, String nome, String senha, String cpf) {
