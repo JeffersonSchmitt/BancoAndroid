@@ -17,7 +17,7 @@
         />
         <meta-data
             android:name="AA_MODELS"
-            android:value="comjeffersonschmitt.github.bancoandroid.domain.User"
+            android:value="comjeffersonschmitt.github.bancoandroid.domain.User, comjeffersonschmitt.github.bancoandroid.domain.Conta"
 
         />
 
