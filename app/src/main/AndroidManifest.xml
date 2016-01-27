@@ -6,7 +6,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:name=˜.BancoApp˜;
+        android:name=".BancoApp"
         android:theme="@style/AppTheme">
         <meta-data
             android:name="AA_DB_NAME"
