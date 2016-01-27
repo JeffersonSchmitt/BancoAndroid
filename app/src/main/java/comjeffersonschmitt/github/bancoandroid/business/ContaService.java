@@ -1,4 +1,3 @@
 package comjeffersonschmitt.github.bancoandroid.business;
-
-public class UserServices {
+public class ContaService {
 }
