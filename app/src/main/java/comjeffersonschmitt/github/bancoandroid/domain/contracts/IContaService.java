@@ -6,7 +6,7 @@ import comjeffersonschmitt.github.bancoandroid.domain.Conta;
 import comjeffersonschmitt.github.bancoandroid.domain.User;
 
 public interface IContaService {
-    List<User> get();
+    List<Conta> get();
     void create(Conta conta);
     void remove(Conta conta);
 }
