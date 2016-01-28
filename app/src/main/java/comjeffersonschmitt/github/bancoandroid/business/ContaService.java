@@ -18,7 +18,7 @@ public class ContaService implements IContaService {
         _contaRepository = new ContaRepository();
     }
     @Override
-    public List<User> get() {
+    public List<Conta> get() {
         return _contaRepository.get();
     }
 
