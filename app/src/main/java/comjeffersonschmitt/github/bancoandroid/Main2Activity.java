@@ -31,6 +31,7 @@ public class Main2Activity extends Activity {
 
     @Click void Sair(){
         Intent Sair = new Intent(this, MainActivity_.class);
+        
         startActivity(Sair);
     }
     @Click void Saque(){
