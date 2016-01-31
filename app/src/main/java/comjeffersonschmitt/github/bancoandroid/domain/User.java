@@ -12,7 +12,7 @@ public class User extends Model{
   @Column(name = "Senha") String senha;
   @Column(name = "Cpf") String cpf;
 
-  public User() {
+  public User(String usuarioUser, String senhaUser) {
     super();
   }
 
@@ -36,6 +36,7 @@ public class User extends Model{
   public String getCpf() {
     return cpf;
   }// pega o cpf
+
 
 
 }

@@ -9,17 +9,12 @@ import comjeffersonschmitt.github.bancoandroid.domain.contracts.IContaRepository
 public class ContaRepository implements IContaRepository {
 
     @Override
-    public List<User> get() {
+    public List<Conta> get() {
         return null;
     }
 
     @Override
     public void add(Conta conta) {
-
-    }
-
-    @Override
-    public void changesaldo(double saldo) {
 
     }
 
