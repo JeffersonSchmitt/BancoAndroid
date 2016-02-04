@@ -12,7 +12,7 @@ public class User extends Model{
   @Column(name = "Senha") String senha;
   @Column(name = "Cpf") String cpf;
 
-  public User(String usuarioUser, String senhaUser) {
+  public User() {
     super();
   }
 
@@ -22,6 +22,12 @@ public class User extends Model{
     this.senha = senha;
     this.cpf = cpf;
   }
+
+  public User(String login, String senha) {
+    this.login = login;
+    this.senha = senha;
+  }
+
 
   public String getLogin() {
     return login;

@@ -8,13 +8,31 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="comjeffersonschmitt.github.bancoandroid.Main2Activity">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Saldo"
+        android:id="@+id/saldouser"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="ID"
+        android:ems="10"
+        android:id="@+id/iduser"
+        android:layout_below="@+id/saldouser"
+        android:layout_alignRight="@+id/saldouser"
+        android:layout_alignEnd="@+id/saldouser"
+        android:layout_alignLeft="@+id/saldouser"
+        android:layout_alignStart="@+id/saldouser"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Saque"
         android:id="@+id/Saque"
-        android:layout_centerVertical="true"
+        android:layout_above="@+id/Sair"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -23,7 +41,7 @@
         android:layout_height="wrap_content"
         android:text="Deposito"
         android:id="@+id/Deposito"
-        android:layout_alignParentTop="true"
+        android:layout_above="@+id/Saque"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -35,4 +53,5 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
 </RelativeLayout>

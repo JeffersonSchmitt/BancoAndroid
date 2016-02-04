@@ -23,6 +23,17 @@ public class UserService implements IUserService {
     return _userRepository.getById(id);
   }
 
+  @Override public User getByUsername(String username, String pass) {
+    User user = _userRepository.getByUsername(username);
+    if (user == null){
+      return null;
+    }
+    if (user.getSenha().equals(pass)){
+      return user;
+    }
+    return null;
+  }
+
   @Override public void changeSenha(String senha) {
     this.changeSenha(senha);
   }
