@@ -12,7 +12,11 @@ public class UserRepository implements IUserRepository{
   }
 
   @Override public User getById(int id) {
-    return new Select().from(User.class).where("usuario=?",id).executeSingle();
+    return new Select().from(User.class).where("Id = ?",id).executeSingle();
+  }
+
+  @Override public User getByUsername(String username) {
+    return new Select().from(User.class).where("Login = ?", username).executeSingle();
   }
 
   @Override public void add(User user) {
