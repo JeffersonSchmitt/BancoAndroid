@@ -30,10 +30,15 @@ import comjeffersonschmitt.github.bancoandroid.domain.contracts.IUserService;
   @ViewById Button Saque;
   @ViewById Button Deposito;
   @ViewById Button Sair;
+  Conta conta;
+  Bundle bundle;
 
   @AfterViews void init() {
     contaService = new ContaService();
-   // updateSaldo();
+    bundle = getIntent().getExtras();
+    long id=bundle.getLong("id");
+    conta = contaService.getByUserId(id);
+   updateSaldo();
   }
 
   @Click void Sair() {
@@ -50,13 +55,9 @@ import comjeffersonschmitt.github.bancoandroid.domain.contracts.IUserService;
     Intent Deposito = new Intent(this, Deposito_.class);
     startActivity(Deposito);
   }
-/*
+
   @UiThread void updateSaldo() {
-    saldouser.setText(pegaSaldo());
+    saldouser.setText(String.valueOf(conta.getSaldo()));
   }
 
-  String pegaSaldo() {
-    //fazer exibir o saldo aqui
-
-  }*/
 }

@@ -24,7 +24,7 @@ public class ContaService implements IContaService {
   }
 
   @Override
-  public Conta getById(long id) {
+  public Conta getByUserId(long id) {
     return _contaRepository.getByUserId(id);
   }
 

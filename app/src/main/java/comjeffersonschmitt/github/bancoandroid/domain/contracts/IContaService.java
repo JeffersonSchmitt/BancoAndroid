@@ -8,7 +8,7 @@ import comjeffersonschmitt.github.bancoandroid.domain.User;
 public interface IContaService {
   List<Conta> get();
 
-  Conta getById(long id);
+  Conta getByUserId(long id);
 
   void create(Conta conta);
 

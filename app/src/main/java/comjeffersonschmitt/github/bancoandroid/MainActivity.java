@@ -2,6 +2,7 @@ package comjeffersonschmitt.github.bancoandroid;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -42,8 +43,10 @@ import org.androidannotations.annotations.ViewById;
       Toast.makeText(this, "Usuário inválido", Toast.LENGTH_SHORT).show();
       return;
     }
+    Bundle bundle = new Bundle();
+    bundle.putLong("id", response.getId());
     Intent i = new Intent(this, Main2Activity_.class);
-    i.putExtra("id", response.getId());
+    i.putExtras(bundle);
     startActivity(i);
     finish();
   }
