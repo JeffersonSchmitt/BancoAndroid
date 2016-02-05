@@ -7,7 +7,7 @@ import com.activeandroid.annotation.Table;
 @Table(name = "Conta")
 public class Conta extends Model {
 
-  @Column(name = "Saldo") double saldo=1000;
+  @Column(name = "Saldo") double saldo=1000.0;
   @Column(name = "User") User user;
 
   public Conta() {

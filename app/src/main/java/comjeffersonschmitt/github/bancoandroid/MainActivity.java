@@ -33,7 +33,7 @@ import org.androidannotations.annotations.ViewById;
     String user = usuario.getText().toString();
     String pass = senha.getText().toString();
 
-    if (user.isEmpty() || pass.isEmpty()){
+    if (user.isEmpty() || pass.isEmpty()) {
       Toast.makeText(this, "Campos vazios", Toast.LENGTH_SHORT).show();
     }
 

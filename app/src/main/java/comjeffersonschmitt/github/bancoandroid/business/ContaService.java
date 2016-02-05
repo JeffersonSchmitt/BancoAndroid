@@ -12,23 +12,29 @@ import comjeffersonschmitt.github.bancoandroid.repository.UserRepository;
 
 public class ContaService implements IContaService {
 
-    private IContaRepository _contaRepository;
+  private IContaRepository _contaRepository;
 
-    public void ContaService() {
-        _contaRepository = new ContaRepository();
-    }
-    @Override
-    public List<Conta> get() {
-        return _contaRepository.get();
-    }
+  public void ContaService() {
+    _contaRepository = new ContaRepository();
+  }
 
-    @Override
-    public void create(Conta conta) {
-        _contaRepository.add(conta);
-    }
+  @Override
+  public List<Conta> get() {
+    return _contaRepository.get();
+  }
 
-    @Override
-    public void remove(Conta conta) {
-        _contaRepository.delete(conta);
-    }
+  @Override
+  public Conta getById(long id) {
+    return _contaRepository.getByUserId(id);
+  }
+
+  @Override
+  public void create(Conta conta) {
+    _contaRepository.add(conta);
+  }
+
+  @Override
+  public void remove(Conta conta) {
+    _contaRepository.delete(conta);
+  }
 }
