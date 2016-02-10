@@ -6,13 +6,13 @@ import comjeffersonschmitt.github.bancoandroid.domain.User;
 import comjeffersonschmitt.github.bancoandroid.domain.contracts.IUserRepository;
 import java.util.List;
 
-public class UserRepository implements IUserRepository{
+public class UserRepository implements IUserRepository {
   @Override public List<User> get() {
     return new Select().from(User.class).execute();
   }
 
   @Override public User getById(int id) {
-    return new Select().from(User.class).where("Id = ?",id).executeSingle();
+    return new Select().from(User.class).where("Id = ?", id).executeSingle();
   }
 
   @Override public User getByUsername(String username) {
@@ -28,6 +28,6 @@ public class UserRepository implements IUserRepository{
   }
 
   @Override public void delete(int id) {
-    new Delete().from(User.class).where("usuario=?",id).executeSingle();
+    new Delete().from(User.class).where("usuario=?", id).executeSingle();
   }
 }
