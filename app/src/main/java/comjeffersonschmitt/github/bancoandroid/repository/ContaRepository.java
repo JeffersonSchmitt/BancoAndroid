@@ -17,7 +17,7 @@ public class ContaRepository implements IContaRepository {
 
   @Override
   public Conta getByUserId(long id) {
-    return new Select().from(Conta.class).where("User =?", id).executeSingle();
+    return new Select().from(Conta.class).innerJoin(User.class).on("User.Id = Conta.User").where("UserId = ?", id).executeSingle();
   }
 
   @Override

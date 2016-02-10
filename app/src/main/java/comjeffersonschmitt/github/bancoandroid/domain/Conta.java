@@ -1,13 +1,15 @@
 package comjeffersonschmitt.github.bancoandroid.domain;
 
+import android.widget.EditText;
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 
 @Table(name = "Conta")
 public class Conta extends Model {
+  //aqui é a entidade Conta fica tudo o que ela vai ter ou vai conseguir fazer
 
-  @Column(name = "Saldo") double saldo=1000.0;
+  @Column(name = "Saldo") double saldo = 1000.0;
   @Column(name = "User") User user;
 
   public Conta() {
@@ -26,11 +28,11 @@ public class Conta extends Model {
     return saldo;
   }
 
-  public void saca(int valorSaque){
+  public void saca(double valorSaque) {
     this.saldo -= valorSaque;
   }
 
-  public void deposita(int valorSaque){
+  public void deposita(double valorSaque) {
     this.saldo += valorSaque;
   }
 }

@@ -23,7 +23,7 @@ public class User extends Model{
     this.cpf = cpf;
   }
 
-  public User(String login, String senha) {
+  public User(String login, String senha) { //contrutor da conta
     this.login = login;
     this.senha = senha;
   }
